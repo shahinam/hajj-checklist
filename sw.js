@@ -23,6 +23,9 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
+  // Only cache-first for app shell assets; let API calls go to network
+  const url = new URL(e.request.url);
+  if (url.origin !== location.origin) return;
   e.respondWith(
     caches.match(e.request).then(cached => cached || fetch(e.request))
   );

@@ -1,6 +1,6 @@
 {
   "name": "Hajj Checklist",
-  "short_name": "Hajj List",
+  "short_name": "Hajj",
   "description": "Track your Hajj preparation — documents, clothing, prayer items, and more.",
   "start_url": "/hajj-checklist/",
   "display": "standalone",
